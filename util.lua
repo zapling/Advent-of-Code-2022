@@ -28,5 +28,14 @@ M.split_lines = function(s)
     return lines
 end
 
+M.rebuild_table_index = function(t)
+    local new_table = {}
+    local index = 1
+    for _, v in pairs(t) do
+        new_table[index] = v
+        index = index + 1
+    end
+    return new_table
+end
 
 return M
